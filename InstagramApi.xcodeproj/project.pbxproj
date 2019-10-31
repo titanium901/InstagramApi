@@ -14,6 +14,8 @@
 		CA624FDD236B119F007FFAEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA624FDC236B119F007FFAEB /* Assets.xcassets */; };
 		CA624FE0236B119F007FFAEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA624FDE236B119F007FFAEB /* LaunchScreen.storyboard */; };
 		CA624FEB236B119F007FFAEB /* InstagramApiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA624FEA236B119F007FFAEB /* InstagramApiUITests.swift */; };
+		CA624FFA236B1877007FFAEB /* Hey Comic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA624FF9236B1877007FFAEB /* Hey Comic.ttf */; };
+		CA624FFB236B1877007FFAEB /* Hey Comic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA624FF9236B1877007FFAEB /* Hey Comic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 		CA624FE6236B119F007FFAEB /* InstagramApiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramApiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA624FEA236B119F007FFAEB /* InstagramApiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramApiUITests.swift; sourceTree = "<group>"; };
 		CA624FEC236B119F007FFAEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA624FF9236B1877007FFAEB /* Hey Comic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hey Comic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,7 @@
 		CA624FF7236B1286007FFAEB /* Resourse */ = {
 			isa = PBXGroup;
 			children = (
+				CA624FFC236B188C007FFAEB /* Font */,
 				CA624FDC236B119F007FFAEB /* Assets.xcassets */,
 			);
 			path = Resourse;
@@ -129,6 +133,14 @@
 				CA624FD7236B119D007FFAEB /* ViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CA624FFC236B188C007FFAEB /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				CA624FF9236B1877007FFAEB /* Hey Comic.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +226,7 @@
 			files = (
 				CA624FE0236B119F007FFAEB /* LaunchScreen.storyboard in Resources */,
 				CA624FDD236B119F007FFAEB /* Assets.xcassets in Resources */,
+				CA624FFA236B1877007FFAEB /* Hey Comic.ttf in Resources */,
 				CA624FDB236B119D007FFAEB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA624FFB236B1877007FFAEB /* Hey Comic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
