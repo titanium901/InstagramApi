@@ -30,6 +30,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SUh-qc-hDU">
+                                <rect key="frame" x="61" y="276" width="292" height="76"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e8Z-GS-f4x">
+                                        <rect key="frame" x="0.0" y="0.0" width="292" height="34"/>
+                                        <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gY1-uv-URP">
+                                        <rect key="frame" x="0.0" y="42" width="292" height="34"/>
+                                        <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="haS-oz-r6Q">
                                 <rect key="frame" x="61" y="395" width="292" height="106"/>
                                 <subviews>
@@ -61,21 +76,6 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SUh-qc-hDU">
-                                <rect key="frame" x="61" y="276" width="292" height="76"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e8Z-GS-f4x">
-                                        <rect key="frame" x="0.0" y="0.0" width="292" height="34"/>
-                                        <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gY1-uv-URP">
-                                        <rect key="frame" x="0.0" y="42" width="292" height="34"/>
-                                        <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -91,8 +91,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="centerAlignLogIn" destination="rk7-Bf-mC4" id="Ihh-bx-jVO"/>
+                        <outlet property="centerAlignMainLabel" destination="c5u-sE-xDu" id="hc4-Xg-IhR"/>
+                        <outlet property="centerAlignTextFields" destination="QIX-Lm-rpB" id="2fJ-wL-iRr"/>
                         <outlet property="logInButton" destination="PDe-ma-lFV" id="uBM-ki-AL6"/>
+                        <outlet property="mainLabel" destination="Aq3-Vh-USc" id="0T0-G5-Cua"/>
+                        <outlet property="orLabel" destination="9Vo-kN-9C6" id="1hr-Zq-QgV"/>
                         <outlet property="passwordTextField" destination="gY1-uv-URP" id="PvN-br-2Bo"/>
+                        <outlet property="signUpButton" destination="UxL-Vt-SWY" id="9t4-GU-4pe"/>
                         <outlet property="usernameTextField" destination="e8Z-GS-f4x" id="Mbp-hG-AZH"/>
                         <segue destination="Yjv-1d-RIo" kind="presentation" identifier="loginSeque" id="VAF-qC-lUF"/>
                     </connections>

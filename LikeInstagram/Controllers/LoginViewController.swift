@@ -12,6 +12,16 @@ import Firebase
 class LoginViewController: UIViewController {
     
     //MARK: IBOutlet
+    
+    @IBOutlet weak var mainLabel: UILabel!
+    @IBOutlet weak var orLabel: UILabel!
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var centerAlignMainLabel: NSLayoutConstraint!
+    @IBOutlet weak var centerAlignTextFields: NSLayoutConstraint!
+    
+    @IBOutlet weak var centerAlignLogIn: NSLayoutConstraint!
+    
+    
     @IBOutlet weak var logInButton: UIButton!
     
     @IBOutlet var usernameTextField: UITextField! {
@@ -30,6 +40,17 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        centerAlignMainLabel.constant -= view.bounds.width
+        centerAlignTextFields.constant -= view.bounds.width
+        centerAlignLogIn.constant -= view.bounds.width
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        animateLoginScreen()
     }
     
     //MARK: IBAction
@@ -119,6 +140,23 @@ class LoginViewController: UIViewController {
         let okBtn = UIAlertAction(title: "Ok", style: .default, handler: nil)
         ac.addAction(okBtn)
         present(ac, animated: true)
+    }
+    
+    func animateLoginScreen() {
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: UIView.AnimationOptions.curveEaseOut, animations: {
+            self.centerAlignMainLabel.constant += self.view.bounds.width
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+            
+        UIView.animate(withDuration: 0.5, delay: 0.4, options: .curveEaseOut, animations: {
+            self.centerAlignTextFields.constant += self.view.bounds.width
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+            
+        UIView.animate(withDuration: 0.5, delay: 0.7, options: .curveEaseOut, animations: {
+            self.centerAlignLogIn.constant += self.view.bounds.width
+            self.view.layoutIfNeeded()
+        }, completion: nil)
     }
 }
 
