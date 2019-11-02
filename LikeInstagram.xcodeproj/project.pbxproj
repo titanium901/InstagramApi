@@ -11,6 +11,8 @@
 		9811BFB1581BA277A38AF3EB /* Pods_LikeInstagramApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F47ACA2042484BCA65F300B /* Pods_LikeInstagramApi.framework */; };
 		CA1A2683236C5AE20035DF26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA1A2682236C5AE20035DF26 /* GoogleService-Info.plist */; };
 		CA1A2684236C5AE20035DF26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA1A2682236C5AE20035DF26 /* GoogleService-Info.plist */; };
+		CA1A268F236D747C0035DF26 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A268E236D747C0035DF26 /* ProfileViewController.swift */; };
+		CA1A2690236D747C0035DF26 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A268E236D747C0035DF26 /* ProfileViewController.swift */; };
 		CA624FD4236B119D007FFAEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA624FD3236B119D007FFAEB /* AppDelegate.swift */; };
 		CA624FD6236B119D007FFAEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA624FD5236B119D007FFAEB /* SceneDelegate.swift */; };
 		CA624FD8236B119D007FFAEB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA624FD7236B119D007FFAEB /* LoginViewController.swift */; };
@@ -38,6 +40,7 @@
 		7F47ACA2042484BCA65F300B /* Pods_LikeInstagramApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LikeInstagramApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C640A0A7D40DC1C01D8AC73B /* Pods-LikeInstagramApiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LikeInstagramApiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LikeInstagramApiUITests/Pods-LikeInstagramApiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CA1A2682236C5AE20035DF26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CA1A268E236D747C0035DF26 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CA624FD0236B119D007FFAEB /* LikeLikeInstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LikeLikeInstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA624FD3236B119D007FFAEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA624FD5236B119D007FFAEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				CA624FD7236B119D007FFAEB /* LoginViewController.swift */,
+				CA1A268E236D747C0035DF26 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -350,6 +354,7 @@
 			files = (
 				CA624FD8236B119D007FFAEB /* LoginViewController.swift in Sources */,
 				CA624FD4236B119D007FFAEB /* AppDelegate.swift in Sources */,
+				CA1A268F236D747C0035DF26 /* ProfileViewController.swift in Sources */,
 				CA624FD6236B119D007FFAEB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA1A2690236D747C0035DF26 /* ProfileViewController.swift in Sources */,
 				CA624FEB236B119F007FFAEB /* InstagramApiUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

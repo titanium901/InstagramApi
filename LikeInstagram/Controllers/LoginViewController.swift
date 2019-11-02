@@ -9,19 +9,18 @@
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UIAdaptivePresentationControllerDelegate {
     
     //MARK: IBOutlet
+    
+    var delegate: UIAdaptivePresentationControllerDelegate?
     
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var orLabel: UILabel!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var centerAlignMainLabel: NSLayoutConstraint!
     @IBOutlet weak var centerAlignTextFields: NSLayoutConstraint!
-    
     @IBOutlet weak var centerAlignLogIn: NSLayoutConstraint!
-    
-    
     @IBOutlet weak var logInButton: UIButton!
     
     @IBOutlet var usernameTextField: UITextField! {
@@ -47,6 +46,7 @@ class LoginViewController: UIViewController {
         centerAlignMainLabel.constant -= view.bounds.width
         centerAlignTextFields.constant -= view.bounds.width
         centerAlignLogIn.constant -= view.bounds.width
+        passwordTextField.text = nil
     }
     
     override func viewDidAppear(_ animated: Bool) {
