@@ -159,16 +159,41 @@
                                             <action selector="showContainerView:" destination="Yjv-1d-RIo" eventType="touchUpInside" id="2mf-bD-5As"/>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="man" translatesAutoresizingMaskIntoConstraints="NO" id="c9h-42-D4G">
+                                        <rect key="frame" x="132" y="20" width="150" height="150"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="IJ2-tY-Hf4"/>
+                                            <constraint firstAttribute="height" constant="150" id="co5-0a-uHt"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="m5M-TG-RFq"/>
+                                            <constraint firstAttribute="width" constant="150" id="ocs-gL-Hkg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="man" translatesAutoresizingMaskIntoConstraints="NO" id="pkU-3B-B4h">
+                                        <rect key="frame" x="132" y="20" width="150" height="150"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="5lZ-Dd-u7B"/>
+                                            <constraint firstAttribute="width" constant="150" id="Teg-ga-xaj"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="jQz-uB-OQh" appends="YES" id="kl8-gd-bZm"/>
+                                        </connections>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="tim-n2-Qrh" firstAttribute="leading" secondItem="a2y-1S-wNR" secondAttribute="leading" id="2FT-hv-OH7"/>
+                                    <constraint firstItem="pkU-3B-B4h" firstAttribute="top" secondItem="a2y-1S-wNR" secondAttribute="top" constant="20" id="9XX-Ql-U1u"/>
                                     <constraint firstItem="gkU-7B-75L" firstAttribute="top" secondItem="a2y-1S-wNR" secondAttribute="top" constant="20" id="9iG-7h-Eua"/>
                                     <constraint firstAttribute="trailing" secondItem="gkU-7B-75L" secondAttribute="trailing" constant="20" id="Crn-GP-Cs3"/>
                                     <constraint firstItem="LZB-lc-P1z" firstAttribute="top" secondItem="a2y-1S-wNR" secondAttribute="top" constant="20" id="FRD-4A-2nC"/>
                                     <constraint firstAttribute="trailing" secondItem="tim-n2-Qrh" secondAttribute="trailing" id="HTl-xD-Ji0"/>
+                                    <constraint firstItem="c9h-42-D4G" firstAttribute="top" secondItem="a2y-1S-wNR" secondAttribute="top" constant="20" id="KPc-Il-btY"/>
                                     <constraint firstAttribute="bottom" secondItem="tim-n2-Qrh" secondAttribute="bottom" id="abN-N7-emj"/>
                                     <constraint firstItem="LZB-lc-P1z" firstAttribute="leading" secondItem="a2y-1S-wNR" secondAttribute="leading" constant="30" id="ebn-bI-anY"/>
+                                    <constraint firstItem="c9h-42-D4G" firstAttribute="centerX" secondItem="a2y-1S-wNR" secondAttribute="centerX" id="mGf-4x-KXt"/>
+                                    <constraint firstItem="pkU-3B-B4h" firstAttribute="centerX" secondItem="a2y-1S-wNR" secondAttribute="centerX" id="mze-QB-EzC"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5A4-af-wY2">
@@ -195,13 +220,20 @@
                     </view>
                     <navigationItem key="navigationItem" id="Fwh-0D-5h6"/>
                     <connections>
+                        <outlet property="auxImageView" destination="c9h-42-D4G" id="c2N-AN-uoV"/>
                         <outlet property="circleMenuButton" destination="gkU-7B-75L" id="zxQ-md-h0z"/>
                         <outlet property="containerView" destination="tim-n2-Qrh" id="U3N-6r-Etx"/>
                         <outlet property="menuButton" destination="LZB-lc-P1z" id="6Nj-Au-Lbf"/>
+                        <outlet property="profileImageView" destination="pkU-3B-B4h" id="xkB-tZ-bSZ"/>
                         <outlet property="slideMenuView" destination="a2y-1S-wNR" id="4pO-qm-7XO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Mq-4x-QWM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jQz-uB-OQh">
+                    <connections>
+                        <action selector="loadPhotoProfile:" destination="Yjv-1d-RIo" id="Lhl-rb-nzy"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="847.82608695652175" y="126.5625"/>
         </scene>
@@ -222,6 +254,7 @@
     </scenes>
     <resources>
         <image name="icons8-circled_menu" width="100" height="100"/>
+        <image name="man" width="512" height="512"/>
         <image name="more" width="60" height="60"/>
     </resources>
 </document>
