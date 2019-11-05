@@ -10,16 +10,18 @@ import UIKit
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var isMenuOpen = false
-    var isContainerOpen = false
-    let isCamer = UIImagePickerController.isSourceTypeAvailable(.camera)
-    
+    // MARK: IBOutlet
     @IBOutlet weak var slideMenuView: UIView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var circleMenuButton: UIButton!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var auxImageView: UIImageView!
+    
+    // MARK: Properties
+    var isMenuOpen = false
+    var isContainerOpen = false
+    let isCamer = UIImagePickerController.isSourceTypeAvailable(.camera)
     
     override func viewDidLoad() {
         super.viewDidLoad()
