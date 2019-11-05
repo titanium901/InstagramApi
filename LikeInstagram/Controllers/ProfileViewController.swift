@@ -25,12 +25,17 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     let isCamer = UIImagePickerController.isSourceTypeAvailable(.camera)
     var realm: Realm!
     var photo = Photo()
+    var objectsArray: Results<Photo>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        realm = try! Realm()
-        print(realm.configuration.fileURL)
+        loadFromRealm()
+        if let data = objectsArray.first?.data {
+            profileImageView.image = convertDataToImage(data: data)
+        }
+       
+//        print(realm.configuration.fileURL!)
     }
     
     override func viewDidLayoutSubviews() {
@@ -174,6 +179,16 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             let t = type(of: err)
             print(t)
         }
+    }
+    
+    func loadFromRealm() {
+        realm = try! Realm()
+        objectsArray = realm.objects(Photo.self)
+    }
+    
+    func convertDataToImage(data: NSData) -> UIImage? {
+        guard let image = UIImage(data: data as Data) else  { return nil }
+        return image
     }
     
 }
