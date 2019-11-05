@@ -13,8 +13,8 @@
 		CA1A2684236C5AE20035DF26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA1A2682236C5AE20035DF26 /* GoogleService-Info.plist */; };
 		CA1A268F236D747C0035DF26 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A268E236D747C0035DF26 /* ProfileViewController.swift */; };
 		CA1A2690236D747C0035DF26 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A268E236D747C0035DF26 /* ProfileViewController.swift */; };
-		CA1A2696236DB0F30035DF26 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A2695236DB0F30035DF26 /* User.swift */; };
-		CA1A2697236DB0F30035DF26 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A2695236DB0F30035DF26 /* User.swift */; };
+		CA1A2696236DB0F30035DF26 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A2695236DB0F30035DF26 /* Photo.swift */; };
+		CA1A2697236DB0F30035DF26 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A2695236DB0F30035DF26 /* Photo.swift */; };
 		CA624FD4236B119D007FFAEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA624FD3236B119D007FFAEB /* AppDelegate.swift */; };
 		CA624FD6236B119D007FFAEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA624FD5236B119D007FFAEB /* SceneDelegate.swift */; };
 		CA624FD8236B119D007FFAEB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA624FD7236B119D007FFAEB /* LoginViewController.swift */; };
@@ -43,7 +43,7 @@
 		C640A0A7D40DC1C01D8AC73B /* Pods-LikeInstagramApiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LikeInstagramApiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LikeInstagramApiUITests/Pods-LikeInstagramApiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CA1A2682236C5AE20035DF26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA1A268E236D747C0035DF26 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		CA1A2695236DB0F30035DF26 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CA1A2695236DB0F30035DF26 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		CA624FD0236B119D007FFAEB /* LikeLikeInstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LikeLikeInstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA624FD3236B119D007FFAEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA624FD5236B119D007FFAEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		CA1A2694236DB0D90035DF26 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CA1A2695236DB0F30035DF26 /* User.swift */,
+				CA1A2695236DB0F30035DF26 /* Photo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -308,12 +308,16 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-LikeInstagramApi/Pods-LikeInstagramApi-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,7 +371,7 @@
 				CA624FD8236B119D007FFAEB /* LoginViewController.swift in Sources */,
 				CA624FD4236B119D007FFAEB /* AppDelegate.swift in Sources */,
 				CA1A268F236D747C0035DF26 /* ProfileViewController.swift in Sources */,
-				CA1A2696236DB0F30035DF26 /* User.swift in Sources */,
+				CA1A2696236DB0F30035DF26 /* Photo.swift in Sources */,
 				CA624FD6236B119D007FFAEB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,7 +382,7 @@
 			files = (
 				CA1A2690236D747C0035DF26 /* ProfileViewController.swift in Sources */,
 				CA624FEB236B119F007FFAEB /* InstagramApiUITests.swift in Sources */,
-				CA1A2697236DB0F30035DF26 /* User.swift in Sources */,
+				CA1A2697236DB0F30035DF26 /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D341383102A6689075D11F9726F186EF"
+               BlueprintIdentifier = "261DC3E86154A87E10567557BC3752E1"
                BuildableName = "Pods_LikeInstagramApi.framework"
                BlueprintName = "Pods-LikeInstagramApi"
                ReferencedContainer = "container:Pods.xcodeproj">

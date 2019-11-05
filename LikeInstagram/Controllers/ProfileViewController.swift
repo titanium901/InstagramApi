@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -22,10 +23,14 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     var isMenuOpen = false
     var isContainerOpen = false
     let isCamer = UIImagePickerController.isSourceTypeAvailable(.camera)
+    var realm: Realm!
+    var photo = Photo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        realm = try! Realm()
+        print(realm.configuration.fileURL)
     }
     
     override func viewDidLayoutSubviews() {
@@ -34,6 +39,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         
     }
     
+    // MARK: IBAction
     @IBAction func dismissToLoginView(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -51,6 +57,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         takePhoto()
     }
     
+    // MARK: Own Methods
     func showContainerView() {
         UIView.animate(withDuration: 0.5,
                        delay: 0,
@@ -83,6 +90,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         profileImageView.layer.borderWidth = 1
         profileImageView.layer.borderColor = UIColor.black.cgColor
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
+        auxImageView.layer.borderWidth = 1
+        auxImageView.layer.borderColor = UIColor.black.cgColor
+        auxImageView.layer.cornerRadius = auxImageView.frame.height / 2
     }
     
     func takePhoto() {
@@ -124,21 +134,46 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            guard let image = info[.editedImage] as? UIImage else { return }
+        guard let image = info[.editedImage] as? UIImage else { return }
         
-            auxImageView.image = profileImageView.image
-            profileImageView.image = image
-            profileImageView.alpha = 0
-            auxImageView.alpha = 1
-            
-            picker.dismiss(animated: true) {
-                delay(seconds: 0.25) {
-                    UIView.animate(withDuration: 2) {
-                        self.profileImageView.alpha = 1
-                        self.auxImageView.alpha = 0
-                    }
+        auxImageView.image = profileImageView.image
+        profileImageView.image = image
+        profileImageView.alpha = 0
+        auxImageView.alpha = 1
+        
+        picker.dismiss(animated: true) {
+            delay(seconds: 0.25) {
+                UIView.animate(withDuration: 2) {
+                    self.profileImageView.alpha = 1
+                    self.auxImageView.alpha = 0
                 }
             }
         }
+      
+        photo.data = convertImageToData(image: profileImageView.image)
+        saveToRealm(photo: photo)
+    }
+    
+    func convertImageToData(image: UIImage?) -> NSData? {
+        guard let image = image else { return nil }
+        let data = NSData(data: image.jpegData(compressionQuality: 0.9)!)
+        return data
+    }
+    
+    func saveToRealm(photo: Photo) {
+    
+        do {
+            try realm.write {
+                realm.create(Photo.self, value: ["id": 0, "data": photo.data as Any], update: Realm.UpdatePolicy.modified)
+            }
+
+        } catch let error as NSError {
+            print("Error: " + error.localizedDescription)
+            let err = error.code
+            print(err)
+            let t = type(of: err)
+            print(t)
+        }
+    }
     
 }

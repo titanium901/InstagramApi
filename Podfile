@@ -7,6 +7,7 @@ target 'LikeInstagramApi' do
 
   pod 'Firebase/Auth'
   pod 'Firebase/Core'
+  pod 'RealmSwift'
 
   target 'LikeInstagramApiUITests' do
     inherit! :search_paths
