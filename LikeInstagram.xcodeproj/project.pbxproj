@@ -7,34 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		42C691DD58B12096238996DB /* Pods_LikeInstagramApiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 476B964F993B8D4D0B33B0CF /* Pods_LikeInstagramApiUITests.framework */; };
 		9811BFB1581BA277A38AF3EB /* Pods_LikeInstagramApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F47ACA2042484BCA65F300B /* Pods_LikeInstagramApi.framework */; };
 		CA1A2683236C5AE20035DF26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA1A2682236C5AE20035DF26 /* GoogleService-Info.plist */; };
-		CA1A2684236C5AE20035DF26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA1A2682236C5AE20035DF26 /* GoogleService-Info.plist */; };
 		CA1A268F236D747C0035DF26 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A268E236D747C0035DF26 /* ProfileViewController.swift */; };
-		CA1A2690236D747C0035DF26 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A268E236D747C0035DF26 /* ProfileViewController.swift */; };
 		CA1A2696236DB0F30035DF26 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A2695236DB0F30035DF26 /* Photo.swift */; };
-		CA1A2697236DB0F30035DF26 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A2695236DB0F30035DF26 /* Photo.swift */; };
 		CA1A26992372AD920035DF26 /* LikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A26982372AD920035DF26 /* LikeViewController.swift */; };
-		CA1A269A2372AD920035DF26 /* LikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A26982372AD920035DF26 /* LikeViewController.swift */; };
+		CA1A26A62372F0480035DF26 /* LikeLikeInstagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A26A52372F0480035DF26 /* LikeLikeInstagramUITests.swift */; };
 		CA624FD4236B119D007FFAEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA624FD3236B119D007FFAEB /* AppDelegate.swift */; };
 		CA624FD6236B119D007FFAEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA624FD5236B119D007FFAEB /* SceneDelegate.swift */; };
 		CA624FD8236B119D007FFAEB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA624FD7236B119D007FFAEB /* LoginViewController.swift */; };
 		CA624FDB236B119D007FFAEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA624FD9236B119D007FFAEB /* Main.storyboard */; };
 		CA624FDD236B119F007FFAEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA624FDC236B119F007FFAEB /* Assets.xcassets */; };
 		CA624FE0236B119F007FFAEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA624FDE236B119F007FFAEB /* LaunchScreen.storyboard */; };
-		CA624FEB236B119F007FFAEB /* InstagramApiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA624FEA236B119F007FFAEB /* InstagramApiUITests.swift */; };
 		CA624FFA236B1877007FFAEB /* Hey Comic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA624FF9236B1877007FFAEB /* Hey Comic.ttf */; };
-		CA624FFB236B1877007FFAEB /* Hey Comic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA624FF9236B1877007FFAEB /* Hey Comic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CA624FE7236B119F007FFAEB /* PBXContainerItemProxy */ = {
+		CA1A26A82372F0480035DF26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CA624FC8236B119D007FFAEB /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CA624FCF236B119D007FFAEB;
-			remoteInfo = InstagramApi;
+			remoteInfo = LikeInstagramApi;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -47,6 +41,9 @@
 		CA1A268E236D747C0035DF26 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CA1A2695236DB0F30035DF26 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		CA1A26982372AD920035DF26 /* LikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeViewController.swift; sourceTree = "<group>"; };
+		CA1A26A32372F0480035DF26 /* LikeLikeInstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LikeLikeInstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA1A26A52372F0480035DF26 /* LikeLikeInstagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeLikeInstagramUITests.swift; sourceTree = "<group>"; };
+		CA1A26A72372F0480035DF26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA624FD0236B119D007FFAEB /* LikeLikeInstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LikeLikeInstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA624FD3236B119D007FFAEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA624FD5236B119D007FFAEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,28 +52,24 @@
 		CA624FDC236B119F007FFAEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA624FDF236B119F007FFAEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA624FE1236B119F007FFAEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA624FE6236B119F007FFAEB /* LikeInstagramApiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LikeInstagramApiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA624FEA236B119F007FFAEB /* InstagramApiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramApiUITests.swift; sourceTree = "<group>"; };
-		CA624FEC236B119F007FFAEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA624FF9236B1877007FFAEB /* Hey Comic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hey Comic.ttf"; sourceTree = "<group>"; };
 		D320F757BE6CD5ECE17117F0 /* Pods-LikeInstagramApiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LikeInstagramApiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LikeInstagramApiUITests/Pods-LikeInstagramApiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E0709F40644AF836EE6A09A7 /* Pods-LikeInstagramApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LikeInstagramApi.release.xcconfig"; path = "Pods/Target Support Files/Pods-LikeInstagramApi/Pods-LikeInstagramApi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CA1A26A02372F0480035DF26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA624FCD236B119D007FFAEB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9811BFB1581BA277A38AF3EB /* Pods_LikeInstagramApi.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA624FE3236B119F007FFAEB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				42C691DD58B12096238996DB /* Pods_LikeInstagramApiUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,11 +93,20 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		CA1A26A42372F0480035DF26 /* LikeLikeInstagramUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CA1A26A52372F0480035DF26 /* LikeLikeInstagramUITests.swift */,
+				CA1A26A72372F0480035DF26 /* Info.plist */,
+			);
+			path = LikeLikeInstagramUITests;
+			sourceTree = "<group>";
+		};
 		CA624FC7236B119D007FFAEB = {
 			isa = PBXGroup;
 			children = (
 				CA624FD2236B119D007FFAEB /* LikeInstagram */,
-				CA624FE9236B119F007FFAEB /* InstagramApiUITests */,
+				CA1A26A42372F0480035DF26 /* LikeLikeInstagramUITests */,
 				CA624FD1236B119D007FFAEB /* Products */,
 				F30582F86CD6BD97C674D509 /* Pods */,
 				9C78CD2FEB9C9B6379C8AF84 /* Frameworks */,
@@ -115,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				CA624FD0236B119D007FFAEB /* LikeLikeInstagram.app */,
-				CA624FE6236B119F007FFAEB /* LikeInstagramApiUITests.xctest */,
+				CA1A26A32372F0480035DF26 /* LikeLikeInstagramUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,15 +132,6 @@
 				CA624FF6236B123B007FFAEB /* Supporting Files */,
 			);
 			path = LikeInstagram;
-			sourceTree = "<group>";
-		};
-		CA624FE9236B119F007FFAEB /* InstagramApiUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CA624FEA236B119F007FFAEB /* InstagramApiUITests.swift */,
-				CA624FEC236B119F007FFAEB /* Info.plist */,
-			);
-			path = InstagramApiUITests;
 			sourceTree = "<group>";
 		};
 		CA624FF5236B11F0007FFAEB /* View */ = {
@@ -202,6 +195,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CA1A26A22372F0480035DF26 /* LikeLikeInstagramUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA1A26AA2372F0480035DF26 /* Build configuration list for PBXNativeTarget "LikeLikeInstagramUITests" */;
+			buildPhases = (
+				CA1A269F2372F0480035DF26 /* Sources */,
+				CA1A26A02372F0480035DF26 /* Frameworks */,
+				CA1A26A12372F0480035DF26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA1A26A92372F0480035DF26 /* PBXTargetDependency */,
+			);
+			name = LikeLikeInstagramUITests;
+			productName = LikeLikeInstagramUITests;
+			productReference = CA1A26A32372F0480035DF26 /* LikeLikeInstagramUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		CA624FCF236B119D007FFAEB /* LikeInstagramApi */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA624FEF236B119F007FFAEB /* Build configuration list for PBXNativeTarget "LikeInstagramApi" */;
@@ -221,41 +232,22 @@
 			productReference = CA624FD0236B119D007FFAEB /* LikeLikeInstagram.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CA624FE5236B119F007FFAEB /* LikeInstagramApiUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CA624FF2236B119F007FFAEB /* Build configuration list for PBXNativeTarget "LikeInstagramApiUITests" */;
-			buildPhases = (
-				C1033702A7CC5D1FDD24DBDB /* [CP] Check Pods Manifest.lock */,
-				CA624FE2236B119F007FFAEB /* Sources */,
-				CA624FE3236B119F007FFAEB /* Frameworks */,
-				CA624FE4236B119F007FFAEB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CA624FE8236B119F007FFAEB /* PBXTargetDependency */,
-			);
-			name = LikeInstagramApiUITests;
-			productName = InstagramApiUITests;
-			productReference = CA624FE6236B119F007FFAEB /* LikeInstagramApiUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		CA624FC8236B119D007FFAEB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1110;
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Iurii Popov";
 				TargetAttributes = {
+					CA1A26A22372F0480035DF26 = {
+						CreatedOnToolsVersion = 11.2;
+						TestTargetID = CA624FCF236B119D007FFAEB;
+					};
 					CA624FCF236B119D007FFAEB = {
 						CreatedOnToolsVersion = 11.1;
-					};
-					CA624FE5236B119F007FFAEB = {
-						CreatedOnToolsVersion = 11.1;
-						TestTargetID = CA624FCF236B119D007FFAEB;
 					};
 				};
 			};
@@ -273,12 +265,19 @@
 			projectRoot = "";
 			targets = (
 				CA624FCF236B119D007FFAEB /* LikeInstagramApi */,
-				CA624FE5236B119F007FFAEB /* LikeInstagramApiUITests */,
+				CA1A26A22372F0480035DF26 /* LikeLikeInstagramUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CA1A26A12372F0480035DF26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA624FCE236B119D007FFAEB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -288,15 +287,6 @@
 				CA1A2683236C5AE20035DF26 /* GoogleService-Info.plist in Resources */,
 				CA624FFA236B1877007FFAEB /* Hey Comic.ttf in Resources */,
 				CA624FDB236B119D007FFAEB /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA624FE4236B119F007FFAEB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CA624FFB236B1877007FFAEB /* Hey Comic.ttf in Resources */,
-				CA1A2684236C5AE20035DF26 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,27 +337,17 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C1033702A7CC5D1FDD24DBDB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LikeInstagramApiUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CA1A269F2372F0480035DF26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA1A26A62372F0480035DF26 /* LikeLikeInstagramUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA624FCC236B119D007FFAEB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -381,24 +361,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CA624FE2236B119F007FFAEB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CA1A2690236D747C0035DF26 /* ProfileViewController.swift in Sources */,
-				CA624FEB236B119F007FFAEB /* InstagramApiUITests.swift in Sources */,
-				CA1A2697236DB0F30035DF26 /* Photo.swift in Sources */,
-				CA1A269A2372AD920035DF26 /* LikeViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CA624FE8236B119F007FFAEB /* PBXTargetDependency */ = {
+		CA1A26A92372F0480035DF26 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CA624FCF236B119D007FFAEB /* LikeInstagramApi */;
-			targetProxy = CA624FE7236B119F007FFAEB /* PBXContainerItemProxy */;
+			targetProxy = CA1A26A82372F0480035DF26 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -422,6 +391,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CA1A26AB2372F0480035DF26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54SGD4HVN5;
+				INFOPLIST_FILE = LikeLikeInstagramUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.IuriiPopov.LikeLikeInstagramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LikeInstagramApi;
+			};
+			name = Debug;
+		};
+		CA1A26AC2372F0480035DF26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54SGD4HVN5;
+				INFOPLIST_FILE = LikeLikeInstagramUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.IuriiPopov.LikeLikeInstagramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LikeInstagramApi;
+			};
+			name = Release;
+		};
 		CA624FED236B119F007FFAEB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -576,51 +585,18 @@
 			};
 			name = Release;
 		};
-		CA624FF3236B119F007FFAEB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C640A0A7D40DC1C01D8AC73B /* Pods-LikeInstagramApiUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 54SGD4HVN5;
-				INFOPLIST_FILE = InstagramApiUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.IuriiPopov.InstagramApiUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = InstagramApi;
-			};
-			name = Debug;
-		};
-		CA624FF4236B119F007FFAEB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D320F757BE6CD5ECE17117F0 /* Pods-LikeInstagramApiUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 54SGD4HVN5;
-				INFOPLIST_FILE = InstagramApiUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.IuriiPopov.InstagramApiUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = InstagramApi;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CA1A26AA2372F0480035DF26 /* Build configuration list for PBXNativeTarget "LikeLikeInstagramUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA1A26AB2372F0480035DF26 /* Debug */,
+				CA1A26AC2372F0480035DF26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CA624FCB236B119D007FFAEB /* Build configuration list for PBXProject "LikeInstagram" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -635,15 +611,6 @@
 			buildConfigurations = (
 				CA624FF0236B119F007FFAEB /* Debug */,
 				CA624FF1236B119F007FFAEB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CA624FF2236B119F007FFAEB /* Build configuration list for PBXNativeTarget "LikeInstagramApiUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CA624FF3236B119F007FFAEB /* Debug */,
-				CA624FF4236B119F007FFAEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
