@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 
+
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // MARK: IBOutlet
@@ -18,6 +19,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var circleMenuButton: UIButton!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var auxImageView: UIImageView!
+    @IBOutlet weak var likeCountLabel: UILabel!
     
     // MARK: Properties
     var isMenuOpen = false
@@ -26,6 +28,11 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     var realm: Realm!
     var photo = Photo()
     var objectsArray: Results<Photo>!
+    var likeCount = 0 {
+        didSet {
+            likeCountLabel.text = "\(likeCount)"
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,13 +41,25 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         if let data = objectsArray.first?.data {
             profileImageView.image = convertDataToImage(data: data)
         }
-       
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(gotLikeNotification), name: NSNotification.Name("likeNotification"), object: nil)
+        
+        print("Load")
+        
+       print(containerView.frame.origin.y)
 //        print(realm.configuration.fileURL!)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         containerView.frame.origin.y = view.frame.height
+        
+    }
+    
+    @objc func gotLikeNotification() {
+        likeCount += 1
+        print(likeCount)
+        print(containerView.frame.origin.y)
         
     }
     
@@ -70,10 +89,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                        initialSpringVelocity: 0,
                        options: .curveEaseInOut,
                        animations: {
-                        self.containerView.frame.origin.y = self.isContainerOpen ? self.view.frame.height - self.containerView.frame.height : self.view.frame.height
+                        self.containerView.frame.origin.y = self.isContainerOpen ? self.view.frame.height - self.containerView.frame.height - 44 : self.view.frame.height
                         self.circleMenuButton.transform = CGAffineTransform(rotationAngle: self.isContainerOpen ? CGFloat(Double.pi/4) : CGFloat(Double.pi * 2))
         }) { (finished) in
-            
         }
     }
     
@@ -159,6 +177,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         saveToRealm(photo: photo)
     }
     
+    
+    // MARK: Helpers Methods
     func convertImageToData(image: UIImage?) -> NSData? {
         guard let image = image else { return nil }
         let data = NSData(data: image.jpegData(compressionQuality: 0.9)!)
@@ -192,3 +212,5 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
 }
+
+

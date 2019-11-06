@@ -116,7 +116,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zao-8y-N73">
-                                <rect key="frame" x="20" y="64" width="45" height="44"/>
+                                <rect key="frame" x="20" y="64" width="42" height="42"/>
                                 <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="25"/>
                                 <state key="normal" title="Exit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -180,10 +180,17 @@
                                             <outletCollection property="gestureRecognizers" destination="jQz-uB-OQh" appends="YES" id="kl8-gd-bZm"/>
                                         </connections>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvB-pS-ddk">
+                                        <rect key="frame" x="197.5" y="178" width="19" height="41"/>
+                                        <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="tim-n2-Qrh" firstAttribute="leading" secondItem="a2y-1S-wNR" secondAttribute="leading" id="2FT-hv-OH7"/>
+                                    <constraint firstItem="cvB-pS-ddk" firstAttribute="centerX" secondItem="a2y-1S-wNR" secondAttribute="centerX" id="7rE-SF-6EN"/>
                                     <constraint firstItem="pkU-3B-B4h" firstAttribute="top" secondItem="a2y-1S-wNR" secondAttribute="top" constant="20" id="9XX-Ql-U1u"/>
                                     <constraint firstItem="gkU-7B-75L" firstAttribute="top" secondItem="a2y-1S-wNR" secondAttribute="top" constant="20" id="9iG-7h-Eua"/>
                                     <constraint firstAttribute="trailing" secondItem="gkU-7B-75L" secondAttribute="trailing" constant="20" id="Crn-GP-Cs3"/>
@@ -194,6 +201,7 @@
                                     <constraint firstItem="LZB-lc-P1z" firstAttribute="leading" secondItem="a2y-1S-wNR" secondAttribute="leading" constant="30" id="ebn-bI-anY"/>
                                     <constraint firstItem="c9h-42-D4G" firstAttribute="centerX" secondItem="a2y-1S-wNR" secondAttribute="centerX" id="mGf-4x-KXt"/>
                                     <constraint firstItem="pkU-3B-B4h" firstAttribute="centerX" secondItem="a2y-1S-wNR" secondAttribute="centerX" id="mze-QB-EzC"/>
+                                    <constraint firstItem="cvB-pS-ddk" firstAttribute="top" secondItem="c9h-42-D4G" secondAttribute="bottom" constant="8" id="pNf-r6-kTc"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5A4-af-wY2">
@@ -223,6 +231,7 @@
                         <outlet property="auxImageView" destination="c9h-42-D4G" id="c2N-AN-uoV"/>
                         <outlet property="circleMenuButton" destination="gkU-7B-75L" id="zxQ-md-h0z"/>
                         <outlet property="containerView" destination="tim-n2-Qrh" id="U3N-6r-Etx"/>
+                        <outlet property="likeCountLabel" destination="cvB-pS-ddk" id="dLG-iS-7Qp"/>
                         <outlet property="menuButton" destination="LZB-lc-P1z" id="6Nj-Au-Lbf"/>
                         <outlet property="profileImageView" destination="pkU-3B-B4h" id="xkB-tZ-bSZ"/>
                         <outlet property="slideMenuView" destination="a2y-1S-wNR" id="4pO-qm-7XO"/>
@@ -237,14 +246,29 @@
             </objects>
             <point key="canvasLocation" x="847.82608695652175" y="126.5625"/>
         </scene>
-        <!--View Controller-->
+        <!--Like View Controller-->
         <scene sceneID="R50-vG-B9s">
             <objects>
-                <viewController id="aPV-Jt-Nay" sceneMemberID="viewController">
+                <viewController id="aPV-Jt-Nay" customClass="LikeViewController" customModule="LikeLikeInstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SWR-xV-K4q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="312"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QiI-9a-rmk">
+                                <rect key="frame" x="157" y="104" width="100" height="100"/>
+                                <state key="normal" image="icons8-hearts"/>
+                                <connections>
+                                    <action selector="likeButton:" destination="aPV-Jt-Nay" eventType="touchUpInside" id="OlC-GM-N7f"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QiI-9a-rmk" firstAttribute="top" secondItem="Ldb-hD-gSu" secondAttribute="top" constant="60" id="E2W-It-wDN"/>
+                            <constraint firstItem="Ldb-hD-gSu" firstAttribute="trailing" secondItem="QiI-9a-rmk" secondAttribute="trailing" constant="157" id="N28-4z-qKJ"/>
+                            <constraint firstItem="QiI-9a-rmk" firstAttribute="leading" secondItem="Ldb-hD-gSu" secondAttribute="leading" constant="157" id="OTW-ba-Nbq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ldb-hD-gSu"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5DZ-UQ-qX1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -254,6 +278,7 @@
     </scenes>
     <resources>
         <image name="icons8-circled_menu" width="100" height="100"/>
+        <image name="icons8-hearts" width="100" height="100"/>
         <image name="man" width="512" height="512"/>
         <image name="more" width="60" height="60"/>
     </resources>
