@@ -80,6 +80,10 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         print("Tap")
         takePhoto()
     }
+    @IBAction func setToZeroAction(_ sender: UIButton) {
+        likeCount = 0
+    }
+    
     
     // MARK: Own Methods
     func showContainerView() {
